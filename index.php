@@ -18,7 +18,7 @@ $data = query("SELECT * FROM test");
 <body>
     <h1>Tabel Data</h1>
 
-    <a href="tambah.php">Tambah Data</a> <br> <br>
+    <a href="create.php">Tambah Data</a> <br> <br>
 
     <table border="1" cellpadding='10' cellspacing="0">
         <tr>
@@ -38,7 +38,7 @@ $data = query("SELECT * FROM test");
                 <td><?= $d["Alamat"]; ?></td>
                 <td><?= $d["Hobi"]; ?></td>
                 <td><img src="img/<?= $d["Foto"]; ?>" width="60"></td>
-                <td><a href="">Ubah</a> | <a href="hapus.php?ID=<?= $d["ID"]; ?>" onclick="return confirm('Data yakin akan dihapus?');">Hapus</a></td>
+                <td><a href="update.php">Ubah</a> | <a href="delete.php?ID=<?= $d["ID"]; ?>" onclick="return confirm('Data yakin akan dihapus?');">Hapus</a></td>
             </tr>
             <?php $i++ ?>
         <?php endforeach; ?>
