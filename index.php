@@ -38,7 +38,7 @@ $data = query("SELECT * FROM test");
                 <td><?= $d["Alamat"]; ?></td>
                 <td><?= $d["Hobi"]; ?></td>
                 <td><img src="img/<?= $d["Foto"]; ?>" width="60"></td>
-                <td><a href="update.php">Ubah</a> | <a href="delete.php?ID=<?= $d["ID"]; ?>" onclick="return confirm('Data yakin akan dihapus?');">Hapus</a></td>
+                <td><a href="update.php?ID=<?= $d["ID"]; ?>">Ubah</a> | <a href="delete.php?ID=<?= $d["ID"]; ?>" onclick="return confirm('Data yakin akan dihapus?');">Hapus</a></td>
             </tr>
             <?php $i++ ?>
         <?php endforeach; ?>

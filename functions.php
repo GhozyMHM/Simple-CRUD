@@ -48,3 +48,25 @@ function hapus($id)
 
     return mysqli_affected_rows($conn);
 }
+
+function ubah($data)
+{
+    global $conn;
+
+    $id = $data["ID"];
+    $nama = htmlspecialchars($data["Nama"]);
+    $alamat = htmlspecialchars($data["Alamat"]);
+    $hobi = htmlspecialchars($data["Hobi"]);
+    $foto = htmlspecialchars($data["Foto"]);
+
+    $query = "UPDATE test SET 
+                Nama = '$nama',
+                Alamat = '$alamat',
+                Hobi = '$hobi',
+                Foto = '$foto'
+                WHERE id = $id
+                ";
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
