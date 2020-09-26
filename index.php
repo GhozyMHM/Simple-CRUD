@@ -4,6 +4,11 @@ require 'functions.php';
 
 // Get Data from test Table
 $data = query("SELECT * FROM test");
+
+// Button Cari Clicked
+if (isset($_POST["cari"])) {
+    $data = cari($_POST["keyword"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +24,12 @@ $data = query("SELECT * FROM test");
     <h1>Tabel Data</h1>
 
     <a href="create.php">Tambah Data</a> <br> <br>
+
+    <form action="" method="POST">
+        <input type="text" name="keyword" size="30" placeholder="Masukkan keyword pencarian" autocomplete="off">
+        <button type="submit" name="cari">Cari Data</button>
+        <br> <br>
+    </form>
 
     <table border="1" cellpadding='10' cellspacing="0">
         <tr>

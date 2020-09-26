@@ -70,3 +70,14 @@ function ubah($data)
 
     return mysqli_affected_rows($conn);
 }
+
+function cari($keyword)
+{
+    $query = "SELECT * FROM test
+                WHERE Nama LIKE '%$keyword%'
+                OR Alamat LIKE '%$keyword%'
+                OR Hobi LIKE '%$keyword%'
+                ";
+
+    return query($query);
+}
