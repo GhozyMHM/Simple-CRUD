@@ -23,7 +23,7 @@ if (isset($_POST["cari"])) {
 <body>
     <h1>Tabel Data</h1>
 
-    <a href="create.php">Tambah Data</a> <br> <br>
+    <a href="insert.php">Tambah Data</a> <br> <br>
 
     <form action="" method="POST">
         <input type="text" name="keyword" size="30" placeholder="Masukkan keyword pencarian" autocomplete="off">
